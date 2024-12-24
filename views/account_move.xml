@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="res_company_inherit" model="ir.ui.view">
+        <field name="name">res.company</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="natcom_phase_two_date_fix_time_remove.res_company_inherit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='seconds']" position="after">
+                <field name="count_of_api_invoice" invisible="1"/>
+                <field name="count_of_api_invoice_now" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
